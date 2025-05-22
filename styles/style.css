@@ -30,12 +30,226 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-body {
   font-family: "Manrope", sans-serif;
-  font-size: 0.8125rem;
 }
 img {
+  margin: 0;
+  padding: 0;
   display: block;
+}
+body {
+  background-color: var(--color-grey-200);
+  padding: 64px 24px;
+}
+.share-img,
+.article-preview-img {
+  display: block;
+}
+.article-preview-img {
   width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 200px;
+}
+.container {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  position: relative;
+}
+.content {
+  padding: 32px 30px 16px 30px;
+}
+.text-block_title {
+  font-size: 1.25rem;
+  line-height: 130%;
+  letter-spacing: 0.25px;
+  font-weight: 700;
+  padding-bottom: 24px;
+  color: var(--color-grey-900);
+}
+.text-block_text {
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  font-weight: 500;
+  color: var(--color-grey-500);
+}
+.author-name {
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  font-weight: 700;
+  color: var(--color-grey-900);
+}
+.author-date {
+  font-size: 0.8125rem;
+  line-height: 140%;
+  letter-spacing: 0.12%;
+  font-weight: 500;
+  color: var(--color-grey-400);
+}
+.button-group {
+  padding-top: 48px;
+  display: flex;
+}
+.profil-date {
+  display: flex;
+  align-items: center;
+}
+
+.author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.date-info {
+  margin-right: 64px;
+}
+.share-img {
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+}
+.share-toast {
+  display: flex;
+  position: absolute;
+  background-color: var(--color-grey-900);
+  width: 327px;
+  height: 76px;
+  color: var(--color-white);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  left: 0;
+  transition: 150ms ease-in-out;
+}
+.share-frame {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.share-frame__2 {
+  display: flex;
+  gap: 64px;
+}
+.share-links {
+  display: flex;
+  align-items: center;
+}
+.share-text {
+  margin-right: 24px;
+  text-transform: uppercase;
+  color: var(--color-grey-400);
+  font-weight: 500;
+}
+.share-link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.social-link {
+  width: 20px;
+  height: 20px;
+}
+.b {
+  width: 24px;
+  height: 24px;
+}
+.hidden {
+  display: none;
+}
+.share-button {
+  background-image: url(../images/arrow-redo.svg);
+  height: 25px;
+  width: 25px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  position: relative;
+  top: 4px;
+}
+.share-toast:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  content: "";
+  position: absolute;
+  right: 105px;
+  top: 50px;
+}
+@media (min-width: 48em) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    margin-inline: auto;
+    display: flex;
+    width: 38em;
+    height: 21.625em;
+  }
+  .article-preview-img {
+    width: 229px;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+  .text-block {
+    width: 311px;
+    padding-right: 2px;
+  }
+  .button-group {
+    padding-top: 24px;
+  }
+  .content {
+    padding: 41px auto 41px 32px;
+  }
+  .date-info {
+    margin-right: 104px;
+  }
+  .share-toast {
+    justify-content: center;
+    border-radius: 10px;
+    width: 248px;
+    height: 50px;
+    position: absolute;
+    top: 201px;
+    left: 412px;
+    -webkit-box-shadow: 4.5px 3px 12px 3px #dddddd;
+    -moz-box-shadow: 4.5px 3px 12px 3px #dddddd;
+    box-shadow: 4.5px 3px 12px 3px #dddddd;
+  }
+  .share-button {
+    display: none;
+  }
+}
+@media (min-width: 75em) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 730px;
+    height: 280px;
+  }
+  .article-preview-img {
+    width: 285px;
+    height: 280px;
+  }
+  .text-block {
+    width: 365px;
+    padding-right: 2px;
+  }
+  .date-info {
+    margin-right: 160px;
+  }
+  .share-toast {
+    position: absolute;
+    top: 150px;
+    left: 523px;
+  }
 }
